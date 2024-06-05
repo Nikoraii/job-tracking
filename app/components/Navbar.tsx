@@ -76,7 +76,7 @@ export function StickyNavbar() {
                 <Button
                   variant="text"
                   size="sm"
-                  className="hidden lg:inline-block"
+                  className="hidden lg:inline-block text-indigo-600"
                 >
                   Log In
                 </Button>
