@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Job Application App
 
-## Getting Started
+Track all your job applications in one place!
 
-First, run the development server:
+_You can preview this project **[here](https://job-tracking-five.vercel.app/)**_
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Screenshots
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![App Screenshot](public/screenshot-dashboard.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech stack
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+[![Tech stack](https://skillicons.dev/icons?i=react,ts,nextjs,css,tailwind,supabase)](https://skillicons.dev)
 
-## Learn More
+## Run this project locally
 
-To learn more about Next.js, take a look at the following resources:
+**NPM example**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Clone this repository: `git clone project-name`
+- Install dependencies: `npm i`
+- Create `.env.local` file in root directory of the project and add your Supabase keys
+- Run: `npm run dev`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+_Note: You need to have default auth table in supabase with following fields for jobs table:_
 
-## Deploy on Vercel
+- `id` => _int8_
+- `created_at` => _timestamp_
+- `user_id` => _uuid (Foreign key)_
+- `job_title` => _varchar_
+- `company` => _varchar_
+- `description` => _text_
+- `status` => _text_
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Environment Variables
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To run this project, you will need to add the following environment variables to your .env.local file
+
+`NEXT_PUBLIC_SUPABASE_URL`
+
+`NEXT_PUBLIC_SUPABASE_ANON_KEY`
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Authors
+
+- [NikolaDev](https://github.com/Nikoraii)
